@@ -137,7 +137,7 @@ body {
     /* overflow: hidden; */
     overflow-x: hidden;
 
-    background-image: url(/images/restaurant-fancy-v5.jpg);
+    background-image: url(../images/restaurant-fancy-v5.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
