@@ -1,9 +1,9 @@
 :root {
     --color1: red;
-    --color2: white;
+    --color2: #fff4ef;
     --color3: yellow;
-    --color4: Green;
-    --color5: blue;
+    --color4: #cd8c00;
+    --color5: #f0b026;
     --color6: black;
 }
 
@@ -12,7 +12,7 @@
     padding: 0;
     color: var(--color2);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    transition: all 0.4s ease;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     /* debug */
     /* outline: 2px dashed red; */
 }
@@ -45,10 +45,18 @@ button:active {
     transform: rotate(90deg);
 }
 
-#content i:hover {
-    color: cyan;
-
+#social-media .fa-facebook:hover {
+    color:#3468ce;
 }
+
+#social-media .fa-twitter:hover {
+    color: #00acee;
+}
+
+#social-media .fa-instagram:hover {
+    color: #e1306c;
+}
+
 
 nav.desktop {
     display: none;
@@ -78,6 +86,7 @@ nav.desktop li {
 }
 
 nav.desktop li a {
+    --size: 3px;
     font-size: 1.3rem;
     width: 5rem;
     display: flex;
@@ -85,14 +94,18 @@ nav.desktop li a {
     /* border: 1px solid var(--color2); */
     padding: 10px 5px;
     text-decoration: none;
+    border-bottom: var(--size) solid transparent;
+
     /* background-color: rgba(0,0,0,0.6); */
     /* outline: none; */
 }
 
+nav.desktop li a:hover{
+    border-bottom: var(--size) solid var(--color4);
+}
 
-nav.desktop li a:hover {
-    background-color: var(--color4);
-    /* outline: none; */
+nav.desktop li a.active {
+    border-bottom: var(--size) solid var(--color5);
 }
 
 body {
@@ -112,11 +125,12 @@ body {
     /* overflow: hidden; */
     overflow-x: hidden;
 
-    background-image: url(/images/restaurant-fancy-v2.jpg);
+    background-image: url(/images/restaurant-fancy-v5.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: 50% 65%;
+    background-blend-mode: luminosity;
 }
 
 #content {
@@ -126,6 +140,9 @@ body {
     align-items: center;
     height: 70%;
     margin: 2rem 0;
+
+    /*for readability*/
+    max-width: 700px; 
 }
 
 #content > section {
@@ -135,14 +152,29 @@ body {
     align-items: center;
 }
 
+#title i {
+    font-size: 3rem;
+}
+
 h1, h2, h3, h4, h5 {
     margin: 0;
     text-align: center;
 }
 
+h5 {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* footer {
+    font-size: 0.7rem;
+} */
+
 footer a {
     text-decoration: none;
-
 }
 
 footer a:hover {
