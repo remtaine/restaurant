@@ -5,6 +5,10 @@
     --color4: #cd8c00;
     --color5: #f0b026;
     --color6: black;
+
+    --color-fb: #3b71de;
+    --color-twitter: #00acee;
+    --color-ig: #e1306c;
 }
 
 * {
@@ -12,7 +16,7 @@
     padding: 0;
     color: var(--color2);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
     /* debug */
     /* outline: 2px dashed red; */
 }
@@ -46,7 +50,7 @@ button:active {
 }
 
 #social-media .fa-facebook:hover {
-    color:#3468ce;
+    color:#3b71de;
 }
 
 #social-media .fa-twitter:hover {
@@ -94,18 +98,26 @@ nav.desktop li a {
     /* border: 1px solid var(--color2); */
     padding: 10px 5px;
     text-decoration: none;
+    /* border-bottom-width: var(--size);
+    border-bottom-style: solid;
+    border-bottom-color: transparent; */
     border-bottom: var(--size) solid transparent;
-
+    /* transition: border-bottom-color 0.3s ease-in-out; */
     /* background-color: rgba(0,0,0,0.6); */
     /* outline: none; */
+
+
 }
 
 nav.desktop li a:hover{
-    border-bottom: var(--size) solid var(--color4);
+    /* border-bottom: var(--size) solid var(--color4); */
+    border-bottom-color: var(--color4);
+
 }
 
 nav.desktop li a.active {
-    border-bottom: var(--size) solid var(--color5);
+    /* border-bottom: var(--size) solid var(--color5); */
+    border-bottom-color: var(--color5);
 }
 
 body {
@@ -157,8 +169,17 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
+    --size: 2px;
+    text-shadow: var(--size) var(--size) rgba(0,0,0,0.5);
+
     margin: 0;
     text-align: center;
+}
+
+h1 {
+    --size: 2px;
+    text-shadow: var(--size) var(--size) rgba(0,0,0,0.5);
+    /* font-size: 3rem; */
 }
 
 h5 {
@@ -167,6 +188,7 @@ h5 {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    /* font-size: 1rem; */
 }
 
 /* footer {
@@ -177,9 +199,9 @@ footer a {
     text-decoration: none;
 }
 
-footer a:hover {
-    text-decoration: underline;
-
+footer a:hover, footer a:hover i {
+    /* text-decoration: underline; */
+    color: var(--color5);
 }
 
 
@@ -197,7 +219,7 @@ footer a:hover {
     font-size: 2rem;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 768px) {
     
     nav.mobile {
         display: none;
