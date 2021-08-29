@@ -1,1 +1,2 @@
-console.log("WELCOME!")
+import './styles/normalize.css';
+import './styles/style.scss';
