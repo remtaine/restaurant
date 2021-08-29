@@ -1,0 +1,252 @@
+@font-face {
+    font-family: "Sunshine";
+    src: url('../fonts/Sunshine.woff2') format('woff2'),
+            url('../fonts/Sunshine.woff') format('woff');
+    // font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --color1: red;
+    --color2: #fff4ef;
+    --color3: yellow;
+    --color4: #cd8c00;
+    --color5: #f0b026;
+    --color6: black;
+
+    --color-fb: #3b71de;
+    --color-twitter: #00acee;
+    --color-ig: #e1306c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--color2);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    /* debug */
+    /* outline: 2px dashed red; */
+}
+
+
+html, body {
+    height: 100%;
+    width: 100%;
+    /* background-color: black; */
+    /* width: 500px; */
+}
+
+/* nav {
+    width: 100%;
+    margin: 0;
+} */
+
+nav.mobile {
+    display: block;
+    font-size: 2rem;
+    margin: 0.5rem 1rem;
+    align-self: flex-end;
+}
+
+nav.mobile button {
+    background-color: transparent;
+    border-style: none;
+}
+
+button:active {
+    transform: rotate(90deg);
+}
+
+#social-media .fa-facebook:hover {
+    color:#3b71de;
+}
+
+#social-media .fa-twitter:hover {
+    color: #00acee;
+}
+
+#social-media .fa-instagram:hover {
+    color: #e1306c;
+}
+
+
+nav.desktop {
+    display: none;
+    /* width: 100%; */
+    align-self: flex-end;
+    margin-right: 2rem;
+}
+
+nav.desktop.active {
+    display: block;
+}
+
+nav.desktop ul {
+    /* width: 100%; */
+    /* background-color: red; */
+    /* width: 100%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* gap: ; */
+    margin-top: 0.5rem;
+    list-style-type: none;
+}
+
+nav.desktop li {
+    text-decoration: none;
+}
+
+nav.desktop li a {
+    --size: 3px;
+    font-size: 1.3rem;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid var(--color2); */
+    padding: 10px 5px;
+    text-decoration: none;
+    /* border-bottom-width: var(--size);
+    border-bottom-style: solid;
+    border-bottom-color: transparent; */
+    border-bottom: var(--size) solid transparent;
+    /* transition: border-bottom-color 0.3s ease-in-out; */
+    /* background-color: rgba(0,0,0,0.6); */
+    /* outline: none; */
+
+
+}
+
+nav.desktop li a:hover{
+    /* border-bottom: var(--size) solid var(--color4); */
+    border-bottom-color: var(--color4);
+
+}
+
+nav.desktop li a.active {
+    /* border-bottom: var(--size) solid var(--color5); */
+    border-bottom-color: var(--color5);
+}
+
+body {
+    /* --filter: 0.7; */
+    /* background: linear-gradient( rgba(0, 0, 0, var(--filter)), rgba(0, 0, 0, var(--filter)) ), url(/images/restaurant-fancy.jpg); */
+    /* background-color: black; */
+    /* width: 10vw; */
+    height: 98%;
+    min-height: 500px;
+    margin: 0rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 100%; */
+    /* max-height: 100%; */
+    /* overflow: hidden; */
+    overflow-x: hidden;
+
+    background-image: url(../images/restaurant-fancy-v5.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 65%;
+    background-blend-mode: luminosity;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 70%;
+    margin: 2rem 0;
+
+    /*for readability*/
+    max-width: 700px; 
+}
+
+#content > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title i {
+    font-size: 3rem;
+}
+
+h1, h2, h3, h4, h5 {
+    --size: 2px;
+    text-shadow: var(--size) var(--size) rgba(0,0,0,0.5);
+
+    margin: 0;
+    text-align: center;
+}
+
+#title > h1 {
+    font-family: cursive;
+    // font-family: "Sunshine", Brush Script MT, cursive;
+    font-size: 3rem;
+    --size: 2px;
+    text-shadow: var(--size) var(--size) rgba(0,0,0,0.5);
+    margin: 0 1rem;
+    /* font-size: 3rem; */
+}
+
+h5 {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    /* font-size: 1rem; */
+}
+
+/* footer {
+    font-size: 0.7rem;
+} */
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover, footer a:hover i, nav.mobile i:hover {
+    /* text-decoration: underline; */
+    color: var(--color5);
+}
+
+
+#social-media {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 0.5rem;
+    width: 100%;
+}
+
+#social-media i {
+    font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    
+    nav.mobile {
+        display: none;
+    }
+
+    nav.desktop {
+        display: block;
+    }
+}
+
+@media screen and (min-height: 500px) {
+    
+    body {
+        /* overflow: hidden; */
+        overflow-y: hidden;
+    }
+}
