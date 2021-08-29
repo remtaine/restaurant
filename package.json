@@ -4,7 +4,9 @@
   "description": "Restaurant Project for The Odin Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -25,5 +27,11 @@
   "devDependencies": {
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0"
+  },
+  "dependencies": {
+    "css-loader": "^6.2.0",
+    "sass": "^1.38.2",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1"
   }
 }
