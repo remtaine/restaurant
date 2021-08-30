@@ -145,6 +145,20 @@ nav.desktop {
         }
     }
 
+    &.contact {
+        @extend %center-column;
+        gap: 10px;
+        width: 400px;
+        height: 400px;
+        border-radius: 20px;
+        // height: 80%;
+        // padding: 60px 20px;
+        background-color: rgba($color1, 0.9);
+        h1 {
+            margin-bottom: 50px;
+        }
+    }
+
     section {
         @extend %center-column;
     }
@@ -208,8 +222,11 @@ h5 {
     /* font-size: 1rem; */
 }
 
-footer a {
+footer {
+    border-bottom: 10px solid transparent;
+    a {
     text-decoration: none;
+    }
     &:hover, &:hover i {
         color: $color5;
     }
@@ -247,8 +264,8 @@ footer a {
     }
 }
 
-@media screen and (min-height: 500px) {
-    body {
-        overflow-y: hidden;
-    }
-}
+// @media screen and (min-height: 500px) {
+//     body {
+//         overflow-y: hidden;
+//     }
+// }
