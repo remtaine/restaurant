@@ -120,6 +120,7 @@ nav.desktop {
 #content {
     align-self: center;
     justify-self: center;
+    // transition: background-color 0s;
 
     &.front {
         @extend %center-column;
@@ -226,10 +227,11 @@ footer {
     border-bottom: 10px solid transparent;
     a {
     text-decoration: none;
-    }
     &:hover, &:hover i {
         color: $color5;
     }
+    }
+    
 }
 
 
