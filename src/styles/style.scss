@@ -157,6 +157,7 @@ nav.desktop {
         background-color: rgba($color1, 0.9);
         h1 {
             margin-bottom: 50px;
+            font-size: 4rem;
         }
     }
 
@@ -226,10 +227,10 @@ h5 {
 footer {
     border-bottom: 10px solid transparent;
     a {
-    text-decoration: none;
-    &:hover, &:hover i {
-        color: $color5;
-    }
+        text-decoration: none;
+        &:hover, &:hover i {
+            color: $color5;
+        }
     }
     
 }
@@ -263,6 +264,18 @@ footer {
     nav.desktop {
         align-self: flex-end;
         margin-right: 2rem;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    #content {
+        &.menu {
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
     }
 }
 
