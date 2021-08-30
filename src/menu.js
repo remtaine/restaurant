@@ -26,7 +26,7 @@ export default function createMenu() {
     let article2H2 = document.createElement('h2');
     article2H2.innerHTML = "Blueberry Waffle"
     let article2P = document.createElement('p');
-    article2P.innerHTML = "Velit ea sunt nisi laborum sit laborum elit velit est quis enim aliqua amet.";
+    article2P.innerHTML = "Velit ea sunt nisi laborum sit laborum elit.";
 
     article2.appendChild(article2H2);
     article2.appendChild(article2P);
