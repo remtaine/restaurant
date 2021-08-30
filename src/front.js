@@ -41,7 +41,9 @@ export default function createFront() {
 
     content.appendChild(title);
     content.appendChild(details);
-    console.log("appended shiz");
+    content.classList.remove('menu');
+    content.classList.remove('contact');
+    content.classList.add('front');
 }
 
 /* 

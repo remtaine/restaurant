@@ -5,6 +5,8 @@ import createContact from './contact.js';
 import './styles/normalize.css';
 import './styles/style.scss';
 import './images/food1.jpg';
+import './images/food2.jpg';
+import './images/food3.jpg';
 
 let content = document.getElementById('content');
 
@@ -22,10 +24,20 @@ let tabHome = document.getElementById('tab-home');
 let tabMenu = document.getElementById('tab-menu');
 let tabContact = document.getElementById('tab-contact');
 
-// removeAllChildNodes(content);
-// createFront();
+removeAllChildNodes(content);
+createFront();
 
 tabHome.addEventListener('click', function() {
     removeAllChildNodes(content);
     createFront();
+});
+
+tabMenu.addEventListener('click', function() {
+    removeAllChildNodes(content);
+    createMenu();
+});
+
+tabContact.addEventListener('click', function() {
+    removeAllChildNodes(content);
+    createContact();
 });

@@ -1,5 +1,7 @@
 let content = document.getElementById('content');
 
 export default function createContact() {
-    console.log("Contact");
+    content.classList.remove('menu');
+    content.classList.add('contact');
+    content.classList.remove('front');
 }
